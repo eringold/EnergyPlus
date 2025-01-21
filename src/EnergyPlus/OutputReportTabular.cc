@@ -15361,6 +15361,8 @@ void WriteLoadComponentSummaryTables(EnergyPlusData &state)
                         airLoopHeatTable.peakDesSensLoad = -finalSysSizing.SysHeatCoinSpaceSens;
                         airLoopHeatTable.designPeakLoad = -finalSysSizing.SysDesHeatLoad;
 
+                        airLoopCoolTable.mainFanAirFlow = finalSysSizing.DesCoolVolFlow;
+
                         airLoopCoolTable.diffPeakEst = airLoopCoolTable.peakDesSensLoad - airLoopCoolTable.estInstDelSensLoad;
                         airLoopCoolTable.diffDesignPeak = airLoopCoolTable.designPeakLoad - airLoopCoolTable.peakDesSensLoad;
 
